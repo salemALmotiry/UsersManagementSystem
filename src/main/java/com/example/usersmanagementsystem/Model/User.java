@@ -55,11 +55,11 @@ public class User {
             "   - One number (0-9)\n" +
             "   - One special character (e.g., `!@#$%^&*`)\n" +
             "- No spaces allowed.")
-    @Column(columnDefinition = "varchar(255) not null")
+    @Column(columnDefinition = "varchar(30) not null")
     private String password;
 
     @NotEmpty(message = "User email cannot be null")
-    @Size(min = 10 , max = 500 , message = "User email must be between 10 and 50")
+    @Size(min = 10 , max = 50 , message = "User email must be between 10 and 50")
     @Email(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", message = "Email RegEx rules:"+
             "- Format: Must follow the pattern `local-part@domain`.\n" +
             "- Local part can contain:\n" +
