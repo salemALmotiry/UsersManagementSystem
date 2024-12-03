@@ -79,7 +79,7 @@ public class User {
 
     @NotEmpty(message = "User role cannot be null")
     @Pattern(regexp = "^(user|admin)" , message = "User role can be admin or user only")
-    @Column(columnDefinition = "varchar(8) not null")
+    @Column(columnDefinition = "varchar(5) not null")
     private String role;
 
     @NotNull(message = "Age cannot be null")
